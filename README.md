@@ -1,86 +1,88 @@
-# 🧠 LeetCode Solutions — Taniya Saxena
+# <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" width="32"/> LeetCode Solutions in Java
 
-> *"Solving one problem at a time, understanding the why behind every solution."*
+<p align="center">
+  <a href="https://github.com/taniy8"><img src="https://img.shields.io/badge/Language-Java-007396?style=for-the-badge&logo=java&logoColor=white"/></a>
+  <a href="https://leetcode.com/u/TaniyaSaxena/"><img src="https://img.shields.io/badge/LeetCode-TaniyaSaxena-1a1a2e?style=for-the-badge&logo=leetcode&logoColor=white"/></a>
 
-![Java](https://img.shields.io/badge/Language-Java-orange?style=flat-square&logo=java)
-![Problems Solved](https://img.shields.io/badge/Solved-204-brightgreen?style=flat-square)
-![streak](https://img.shields.io/badge/Max%20Streak-196%20days-red?style=flat-square)
-![Profile](https://img.shields.io/badge/LeetCode-TaniyaSaxena-yellow?style=flat-square&logo=leetcode)
+</p>
 
----
-
-## 📊 Progress Tracker
-
-| Difficulty | Solved | 
-|------------|--------|
-| 🟢 Easy    | 157    |
-| 🟡 Medium  | 43     |
-| 🔴 Hard    | 4      |
-| **Total**  | **204**|
+A structured collection of LeetCode solutions written in Java. Every solution includes a clear explanation of the approach and complexity analysis — because understanding the *why* matters more than just passing the test.
 
 ---
 
-## 📁 Topics
+## What You'll Find Here
 
-| Topic | Problems | Key Concepts |
-|-------|----------|--------------|
-| [Arrays](./arrays/) | | Two pointers, sliding window, prefix sum |
-| [Strings](./strings/) | | HashMap, sliding window, palindrome |
-| [Trees](./trees/) | | DFS, BFS, recursion |
-| [Graphs](./graphs/) | | DFS, BFS, topological sort |
-| [Dynamic Programming](./dynamic-programming/) | | Memoization, tabulation |
-| [Sorting](./sorting/) | | Merge sort, quick sort variants |
-| [Linked Lists](./linked-lists/) | | Fast/slow pointers, reversal |
-| [Stack & Queue](./stack-queue/) | | Monotonic stack, deque |
-| [Binary Search](./binary-search/) | | Search space reduction |
-| [Math](./math/) | | Number theory, bit manipulation |
+- [x] Clean, well-commented Java code
+- [x] Approach explained in plain English for every problem
+- [x] Time and Space complexity on every solution
+- [x] Organized by topic — not just dumped in one folder
 
 ---
 
-## 🗂️ Solution Format
+## Topics
 
-Every solution follows this structure:
+| Topic | Key Patterns |
+|-------|-------------|
+| [Arrays](./arrays/) | Two pointers, sliding window, prefix sum |
+| [Strings](./strings/) | HashMap, sliding window, palindrome |
+| [Trees](./trees/) | DFS, BFS, recursion, level order |
+| [Graphs](./graphs/) | DFS, BFS, topological sort, union find |
+| [Dynamic Programming](./dynamic-programming/) | Memoization, tabulation, state design |
+| [Sorting](./sorting/) | Merge sort, quick select, counting sort |
+| [Linked Lists](./linked-lists/) | Fast/slow pointers, reversal, merge |
+| [Stack & Queue](./stack-queue/) | Monotonic stack, deque, min stack |
+| [Binary Search](./binary-search/) | Search space reduction, rotated arrays |
+| [Math](./math/) | Number theory, bit manipulation, GCD |
+
+---
+
+## Solution Format
+
+Every file follows this structure:
 
 ```java
-// Problem: <Name> (<Difficulty>) — LeetCode #<number>
-// Link: https://leetcode.com/problems/<slug>/
-// Approach: <brief explanation>
-// Time Complexity: O(?)
-// Space Complexity: O(?)
+// Problem: Two Sum (Easy) — LeetCode #1
+// Link: https://leetcode.com/problems/two-sum/
+// Approach: Store each number's complement in a HashMap.
+//           On each iteration, check if the complement already exists.
+// Time Complexity: O(n)
+// Space Complexity: O(n)
 
 class Solution {
-    // clean solution here
+    public int[] twoSum(int[] nums, int target) {
+        HashMap<Integer, Integer> map = new HashMap<>();
+        for (int i = 0; i < nums.length; i++) {
+            int complement = target - nums[i];
+            if (map.containsKey(complement))
+                return new int[]{map.get(complement), i};
+            map.put(nums[i], i);
+        }
+        return new int[]{};
+    }
 }
 ```
 
 ---
 
-## 🔥 Recently Solved
+## How I Approach Problems
 
-| # | Problem | Difficulty | Topic | Approach |
-|---|---------|------------|-------|----------|
-| 1 | Two Sum | Easy | Arrays | HashMap |
-| 20 | Valid Parentheses | Easy | Stack | Stack |
-| 21 | Merge Two Sorted Lists | Easy | Linked List | Two Pointers |
-| 121 | Best Time to Buy Stock | Easy | Arrays | One Pass |
-| 200 | Number of Islands | Medium | Graphs | DFS |
-
-*(Update this table as you solve more problems!)*
-
----
-
-## 💡 My Approach
-
-I don't just solve — I understand:
-1. **Brute force first** — get it working
-2. **Optimize** — find the pattern (sliding window? two pointers? DP?)
-3. **Write complexity** — always note Time & Space
-4. **Push daily** — consistency over speed
+```
+1. READ     ->  Understand fully before touching the keyboard
+2. BRUTE    ->  Naive solution first — get it working
+3. PATTERN  ->  Sliding window? DP? Graph traversal? Find it.
+4. OPTIMIZE ->  Reduce time and space, justify every step
+5. CODE     ->  Clean implementation with meaningful names
+6. PUSH     ->  Daily commit. Consistency over everything.
+```
 
 ---
 
-## 🔗 Connect
+## Connect
 
-- 🐙 GitHub: [taniy8](https://github.com/taniy8)
-- 💼 LinkedIn: [Taniya Saxena](https://linkedin.com/in/taniya-saxena-511524330)
-- 🧩 LeetCode: [TaniyaSaxena](https://leetcode.com/TaniyaSaxena)
+[![GitHub](https://img.shields.io/badge/GitHub-taniy8-181717?style=flat-square&logo=github)](https://github.com/taniy8)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Taniya%20Saxena-0A66C2?style=flat-square&logo=linkedin)](https://linkedin.com/in/taniya-saxena-511524330)
+[![LeetCode](https://img.shields.io/badge/LeetCode-TaniyaSaxena-1a1a2e?style=flat-square&logo=leetcode&logoColor=white)](https://leetcode.com/TaniyaSaxena)
+
+---
+
+<p align="center">If this repo helped you in any way, a star would mean a lot ⭐</p>
